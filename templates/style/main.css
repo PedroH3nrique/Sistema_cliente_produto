@@ -50,9 +50,3 @@ li{
     border-left: 3px solid #1C7240;
     background-color: whitesmoke;
 }
-
-main {
-    background-color: whitesmoke;
-    flex: 1;
-    height: 100vh;
-}

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/forms.css">
     <title>Dashboard</title>
 </head>
 <body>
@@ -26,7 +27,40 @@
 
     </nav>
 
-    <main></main>
+    <main>
+
+        <form action="">
+
+            <div class="campo">
+                <label for="codigoClt">Código</label>
+                <input type="text" id="codigoClt" autocomplete="off" placeholder="Código do Cliente" required>
+            </div>
+
+            <div class="campo">
+                <label for="nomeClt">Nome</label>
+                <input type="text" id="nomeClt" autocomplete="off" placeholder="Nome do Cliente" required>
+            </div>
+
+            <div class="campo">
+                <label for="cidadeClt">Cidade</label>
+                <input type="text" id="cidadeClt" autocomplete="off" placeholder="Cidade do Cliente" required>
+            </div>
+
+            <div class="campo">
+                <label for="estadoClt">Estado</label>
+                <input type="text" id="estadoClt" autocomplete="off" placeholder="Estado do Cliente" required>
+            </div>
+
+            <div class="campo">
+                <label for="vendedorClt">Vendedor</label>
+                <input type="text" id="vendedorClt" autocomplete="off" placeholder="Vendedor do Cliente" required>
+            </div>
+
+            <button type="submit">Enviar</button>
+
+        </form>
+
+    </main>
     
 </body>
 </html>
