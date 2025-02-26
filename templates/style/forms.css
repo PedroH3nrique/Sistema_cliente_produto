@@ -8,7 +8,7 @@ main {
 }
 
 form{
-    width: 350px;
+    width: 550px;
     background-color: white;
     padding: 25px;
     border-radius: 15px;
@@ -23,6 +23,7 @@ label{
 }
 
 .campo{
+    width: 100%;
     margin-bottom: 25px;
 }
 
@@ -49,4 +50,10 @@ button{
 button:hover,
 button:focus{
     background-color: #1C7240;
+}
+
+@media screen and (max-width: 730px) {
+    form{
+        width: 330px;
+    }
 }
