@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/main.css">
-    <link rel="stylesheet" href="style/forms.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/main.css') }}">
+
     <title>Dashboard</title>
 </head>
 <body>
 
     <nav>
 
-        <span class="logo"><img src="assets/logo.svg" alt="logo"></span>
+        <span class="logo"><img src="{{ url_for('static', filename='assets/logo.svg') }}" alt="logo"></span>
 
         <ul>
 
-            <li><a href="index.html"><img src="assets/home.svg" alt="Dashboard"></a></li>
+            <li><a href="/"><img src="{{ url_for('static', filename='assets/home.svg') }}" alt="Dashboard"></a></li>
 
-            <li class="selected"><a href="adicionarcliente.html"><img src="assets/adicionar_cliente.svg" alt="Adicionar CLiente"></a></li>
-
-            <li><a href="relatorios.html"><img src="assets/relatorio.svg" alt="Fazer busca no relatorio"></a></li>
+            <li class="selected"><a href="/adicionarcliente"><img src="{{ url_for('static', filename='assets/adicionar_cliente.svg') }}" alt="Adicionar Cliente"></a></li>
+            
+            <li><a href="/relatorios"><img src="{{ url_for('static', filename='assets/relatorio.svg') }}" alt="Fazer busca no relatorio"></a></li>
 
         </ul>
 
@@ -27,31 +27,31 @@
 
     <main>
 
-        <form action="" method="post">
+        <form action="/" method="post">
 
             <div class="campo">
                 <label for="codigoClt">Código</label>
-                <input type="text" id="codigoClt" autocomplete="off" placeholder="Código do Cliente" required>
+                <input type="text" id="codigoClt" name="codigoClt" autocomplete="off" placeholder="Código do Cliente" required>
             </div>
 
             <div class="campo">
                 <label for="nomeClt">Nome</label>
-                <input type="text" id="nomeClt" autocomplete="off" placeholder="Nome do Cliente" required>
+                <input type="text" id="nomeClt" name="nomeClt" autocomplete="off" placeholder="Nome do Cliente" required>
             </div>
 
             <div class="campo">
                 <label for="cidadeClt">Cidade</label>
-                <input type="text" id="cidadeClt" autocomplete="off" placeholder="Cidade do Cliente" required>
+                <input type="text" id="cidadeClt" name="cidadeClt" autocomplete="off" placeholder="Cidade do Cliente" required>
             </div>
 
             <div class="campo">
                 <label for="estadoClt">Estado</label>
-                <input type="text" id="estadoClt" autocomplete="off" placeholder="Estado do Cliente" required>
+                <input type="text" id="estadoClt" name="estadoClt" autocomplete="off" placeholder="Estado do Cliente" required>
             </div>
 
             <div class="campo">
                 <label for="vendedorClt">Vendedor</label>
-                <input type="text" id="vendedorClt" autocomplete="off" placeholder="Vendedor do Cliente" required>
+                <input type="text" id="vendedorClt" name="vendedorClt" autocomplete="off" placeholder="Vendedor do Cliente" required>
             </div>
 
             <button type="submit">Enviar</button>

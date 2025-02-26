@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/main.css') }}">
     <title>Dashboard</title>
 </head>
 <body>
 
     <nav>
 
-        <span class="logo"><img src="assets/logo.svg" alt="logo"></span>
+        <span class="logo"><img src="{{ url_for('static', filename='assets/logo.svg') }}" alt="logo"></span>
 
         <ul>
 
-            <li class="selected"><a href="index.html"><img src="assets/home.svg" alt="Dashboard"></a></li>
+            <li class="selected"><a href="/"><img src="{{ url_for('static', filename='assets/home.svg') }}" alt="Dashboard"></a></li>
 
-            <li><a href="adicionarcliente.html"><img src="assets/adicionar_cliente.svg" alt="Adicionar CLiente"></a></li>
+            <li><a href="/adicionarcliente"><img src="{{ url_for('static', filename='assets/adicionar_cliente.svg') }}" alt="Adicionar Cliente"></a></li>
 
-            <li><a href="relatorios.html"><img src="assets/relatorio.svg" alt="Fazer busca no relatorio"></a></li>
+            <li><a href="/relatorios"><img src="{{ url_for('static', filename='assets/relatorio.svg') }}" alt="Fazer busca no relatorio"></a></li>
 
         </ul>
 
