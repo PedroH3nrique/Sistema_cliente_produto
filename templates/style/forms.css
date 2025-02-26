@@ -54,6 +54,6 @@ button:focus{
 
 @media screen and (max-width: 730px) {
     form{
-        width: 330px;
+        width: 300px;
     }
 }
