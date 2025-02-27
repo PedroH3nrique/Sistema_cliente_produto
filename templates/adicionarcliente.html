@@ -18,7 +18,7 @@
             <li><a href="/"><img src="{{ url_for('static', filename='assets/home.svg') }}" alt="Dashboard"></a></li>
 
             <li class="selected"><a href="/adicionarcliente"><img src="{{ url_for('static', filename='assets/adicionar_cliente.svg') }}" alt="Adicionar Cliente"></a></li>
-            
+
             <li><a href="/relatorios"><img src="{{ url_for('static', filename='assets/relatorio.svg') }}" alt="Fazer busca no relatorio"></a></li>
 
         </ul>
@@ -27,7 +27,7 @@
 
     <main>
 
-        <form action="/" method="post">
+        <form action="/adicionarcliente" method="post">
 
             <div class="campo">
                 <label for="codigoClt">Código</label>
