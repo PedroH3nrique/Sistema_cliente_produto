@@ -89,6 +89,13 @@ label{
     outline: none;
 }
 
+/* Para WebKit (Chrome, Safari, Edge) */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 button{
     background-color: #38d67a;
     border: none;
@@ -104,6 +111,22 @@ button:hover,
 button:focus{
     background-color: #1C7240;
 }
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
 
 @media screen and (max-width: 730px) {
     form{

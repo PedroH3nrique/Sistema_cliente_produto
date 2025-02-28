@@ -27,11 +27,15 @@
 
     <main>
 
+        {% if error %}
+            <p style="color: red;">{{ error }}</p>
+        {% endif %}
+
         <form action="/adicionarcliente" method="post">
 
             <div class="campo">
                 <label for="codigoClt">Código</label>
-                <input type="text" id="codigoClt" name="codigoClt" autocomplete="off" placeholder="Código do Cliente" required>
+                <input type="number" id="codigoClt" name="codigoClt" autocomplete="off" placeholder="Código do Cliente" required>
             </div>
 
             <div class="campo">
