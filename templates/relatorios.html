@@ -28,32 +28,30 @@
 
     <main>
 
-        <table border="1">
-            <tr>
-                <th>Código</th>
-                <th>Nome</th>
-                <th>Cidade</th>
-                <th>Estado</th>
-                <th>Vendedor</th>
-            </tr>
-            {% for cliente in clientes %}
-            <tr>
-                <td>{{ cliente[0] }}</td>
-                <td>{{ cliente[1] }}</td>
-                <td>{{ cliente[2] }}</td>
-                <td>{{ cliente[3] }}</td>
-                <td>{{ cliente[4] }}</td>
-            </tr>
-            {% endfor %}
-        </table>
+        <div class="container">
 
-        <!--<h1>Dados do Cliente</h1>
-        <p><strong>Código:</strong> {{ codigo }}</p>
-        <p><strong>Nome:</strong> {{ nome }}</p>
-        <p><strong>Cidade:</strong> {{ cidade }}</p>
-        <p><strong>Estado:</strong> {{ estado }}</p>
-        <p><strong>Vendedor:</strong> {{ vendedor }}</p>
-        <a href="/">Voltar</a>-->
+            <div class="busca">
+
+                <input type="text" id="buscarClt">
+                <button onclick="buscarClt()"><img src="{{ url_for('static', filename='assets/relatorio.svg') }}" alt=""></button>
+
+            </div>
+
+            {% for cliente in clientes %}
+                <div class="divisor">
+
+                    <div class="infos">
+                        
+                        <p>{{ cliente[0] }}</p>
+                        <p>{{ cliente[1] }} ({{ cliente[4] }})</p>
+                        
+                    </div>
+                    <a href="#">Abrir</a>
+
+                </div>
+            {% endfor %}
+
+        </div>
 
     </main>
 

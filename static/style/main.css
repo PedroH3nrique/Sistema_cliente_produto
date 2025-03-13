@@ -47,7 +47,7 @@ li{
 }
 
 .selected{
-    border-left: 3px solid #1C7240;
+    border-left: 5px solid #1C7240;
     background-color: whitesmoke;
 }
 
@@ -56,8 +56,81 @@ main {
     flex: 1;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.container{
+    max-height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    overflow-y: scroll;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+}
+
+.busca{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.busca input{
+    height: 40px;
+    width: 280px;
+    outline: 1px solid rgb(226, 226, 226);
+    border: 1px solid rgb(226, 226, 226);
+    padding-left: 10px;
+}
+
+.busca button{
+    position: absolute;
+    right: 0;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px;
+}
+
+.divisor{
+    /*border-radius: 60px;*/
+    display: flex;
+    width: 100%;
+    background-color: transparent;
+    border-bottom: 1px solid rgb(190, 190, 190);
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.divisor .infos{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.divisor .infos p:first-child{
+    font-weight: bold;
+}
+
+.divisor a{
+    background-color: #38d67a;
+    border-radius: 60px;
+    color: white;
+    transition: all 0.3s ease;
+    padding: 5px 30px;
+}
+
+.divisor a:hover{
+    background-color: #1C7240;
 }
 
 form{
@@ -69,6 +142,15 @@ form{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+.erroAddClt{
+    color: red;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 25px;
+    border: 1px solid red;
+    border-radius: 60px;
 }
 
 label{
@@ -96,37 +178,21 @@ input[type="number"]::-webkit-inner-spin-button {
     margin: 0;
 }
 
-button{
+form button{
     background-color: #38d67a;
     border: none;
     outline: none;
     border-radius: 60px;
     color: white;
     transition: all 0.3s ease;
-    padding: 10px 30px;
+    padding: 5px 30px;
     cursor: pointer;
 }
 
-button:hover,
-button:focus{
+form button:hover,
+form button:focus{
     background-color: #1C7240;
 }
-
-table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-  }
-  
-  tr:nth-child(even) {
-    background-color: #dddddd;
-  }
 
 @media screen and (max-width: 730px) {
     form{
