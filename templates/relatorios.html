@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='style/main.css') }}">
     <title>Dashboard</title>
+
+    <style>
+        main {
+            justify-content: flex-start;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -18,9 +25,12 @@
 
             <li><a href="/"><img src="{{ url_for('static', filename='assets/home.svg') }}" alt="Dashboard"></a></li>
 
-            <li><a href="/adicionarcliente"><img src="{{ url_for('static', filename='assets/adicionar_cliente.svg') }}" alt="Adicionar Cliente"></a></li>
-            
-            <li class="selected"><a href="/relatorios"><img src="{{ url_for('static', filename='assets/relatorio.svg') }}" alt="Fazer busca no relatorio"></a></li>
+            <li><a href="/adicionarcliente"><img src="{{ url_for('static', filename='assets/adicionar_cliente.svg') }}"
+                        alt="Adicionar Cliente"></a></li>
+
+            <li class="selected"><a href="/relatorios"><img
+                        src="{{ url_for('static', filename='assets/relatorio.svg') }}"
+                        alt="Fazer busca no relatorio"></a></li>
 
         </ul>
 
@@ -30,26 +40,31 @@
 
         <div class="container">
 
-            <div class="busca">
+            <div class="buscaContainer">
 
-                <input type="text" id="buscarClt">
-                <button onclick="buscarClt()"><img src="{{ url_for('static', filename='assets/relatorio.svg') }}" alt=""></button>
+                <input type="text" id="buscarClt" placeholder="Busca..." oninput="buscarClt()">
 
             </div>
 
-            {% for cliente in clientes %}
-                <div class="divisor">
-
-                    <div class="infos">
-                        
-                        <p>{{ cliente[0] }}</p>
-                        <p>{{ cliente[1] }} ({{ cliente[4] }})</p>
-                        
-                    </div>
-                    <a href="#">Abrir</a>
-
-                </div>
-            {% endfor %}
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Nome</th>
+                        <th>Vendedor</th>
+                    </tr>
+                </thead>
+                <tbody id="corpoTabela">
+                    {% for cliente in clientes %}
+                    <tr>
+                        <td>{{ cliente[0] }}</td>
+                        <td>{{ cliente[1] }}</td>
+                        <td>{{ cliente[4] }}</td>
+                        <td><a href="#">Abrir</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
 
         </div>
 
