@@ -69,10 +69,10 @@ main {
 
 .container{
     width: 50%;
-    height: 600px;
+    height: 400px;
     display: flex;
     flex-direction: column;
-    gap: 35px;
+    gap: 25px;
     align-items: center;
     justify-content: flex-start;
     border-radius: 26px;
@@ -84,6 +84,7 @@ main {
 .buscaContainer{
     background: white;
     width: 100%;
+    padding: 20px 0;
     display: flex;
     position: sticky;
     top: 0;
@@ -115,7 +116,6 @@ main {
 }
 
 table{
-    height: 100%;
     width: 100%;
     text-align: center;
 }
